@@ -1,5 +1,6 @@
 # Autosave files
 *~
+*.blend1
 
 # build
 [Oo]bj/
