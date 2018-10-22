@@ -1,7 +1,7 @@
 ![Imgur](https://i.imgur.com/YHkDl7K.png)   
     
 ```
-                Copyright © 2018  Zachary Kohnen
+Copyright © 2018  Zachary Kohnen
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
