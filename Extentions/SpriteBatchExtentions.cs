@@ -56,21 +56,5 @@ namespace Lorn.Extentions {
             // Draw our pixel texture there
             spriteBatch.Draw(Pixel, new Vector2(screenLocation.X, screenLocation.Y), Color.White);
         }
-        
-        private static BasicEffect BasicEffect;
-        public static void DrawLine3D(this SpriteBatch spriteBatch, Camera camera, Vector3 start, Vector3 end) => DrawLine3D(spriteBatch, camera, start, end, Color.White);
-        public static void DrawLine3D(this SpriteBatch spriteBatch, Camera camera, Vector3 start, Vector3 end, Color color) {
-            if (BasicEffect == null) {
-                BasicEffect = new BasicEffect(camera.Graphics) {
-                    View = camera.ViewMatrix,
-                    Projection = camera.ProjectionMatrix,
-                    VertexColorEnabled = true
-                };
-            }
-
-            BasicEffect.CurrentTechnique.Passes[0].Apply();
-            VertexPositionColor[] vertices = new[] { new VertexPositionColor(start, color), new VertexPositionColor(end, color) };
-            camera.Graphics.DrawUserPrimitives(PrimitiveType.LineList, vertices, 0, 1);
-        }
     }
 }

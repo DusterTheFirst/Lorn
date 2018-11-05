@@ -27,7 +27,7 @@ namespace Lorn.Desktop {
         /// </summary>
         [STAThread]
         static void Main() {
-            using (Lorn game = new Lorn())
+            using (Game game = new Game())
                 game.Run();
         }
     }

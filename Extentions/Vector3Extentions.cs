@@ -13,5 +13,10 @@ namespace Lorn.Extentions {
                 (float)Math.Round(vector3.Y * multiplier) / multiplier,
                 (float)Math.Round(vector3.Z * multiplier) / multiplier);
         }
+        public static Vector3 Normalized(this Vector3 vector3) {
+            Vector3 clone = new Vector3(vector3.X, vector3.Y, vector3.Z);
+            clone.Normalize();
+            return clone;
+        }
     }
 }
